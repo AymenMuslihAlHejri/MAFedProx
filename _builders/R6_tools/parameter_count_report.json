@@ -1,0 +1,104 @@
+{
+  "torch": "2.11.0.dev20260122+cu128",
+  "segmentation_models_pytorch": "0.3.3",
+  "bmc_model_sha256": "2cce9dd1a79566c1c08d0540df4c9de598e41fe2b374921a5274550ecad345b2",
+  "bmc_model_matches_frozen_runs": true,
+  "parameters_per_group": {
+    "encoder (shared)": 21278400,
+    "us_decoder": 3151552,
+    "us_seg_head": 145,
+    "mm_decoder": 3151552,
+    "mm_seg_head": 145,
+    "cls_head (shared)": 148353
+  },
+  "parameters_total": 27730147,
+  "parameters_trainable": 27730147,
+  "parameters_updated_by_an_ultrasound_client": 24578450,
+  "parameters_updated_by_a_mammography_client": 24578450,
+  "float_buffers_elements": 21504,
+  "integer_buffers_count": 57,
+  "float32_size_MiB": 105.78,
+  "unmatched_parameter_names": [],
+  "decoder_blocks": [
+    {
+      "conv3x3": 2,
+      "batchnorm": 2,
+      "out_channels": 256
+    },
+    {
+      "conv3x3": 2,
+      "batchnorm": 2,
+      "out_channels": 128
+    },
+    {
+      "conv3x3": 2,
+      "batchnorm": 2,
+      "out_channels": 64
+    },
+    {
+      "conv3x3": 2,
+      "batchnorm": 2,
+      "out_channels": 32
+    },
+    {
+      "conv3x3": 2,
+      "batchnorm": 2,
+      "out_channels": 16
+    }
+  ],
+  "decoder_center_block": null,
+  "decoder_forward_takes_varargs": true,
+  "encoder_feature_shapes_256": [
+    [
+      1,
+      256,
+      256
+    ],
+    [
+      64,
+      128,
+      128
+    ],
+    [
+      64,
+      64,
+      64
+    ],
+    [
+      128,
+      32,
+      32
+    ],
+    [
+      256,
+      16,
+      16
+    ],
+    [
+      512,
+      8,
+      8
+    ]
+  ],
+  "output_shapes": {
+    "seg_logits": [
+      2,
+      1,
+      256,
+      256
+    ],
+    "cls_logits": [
+      2
+    ]
+  },
+  "output_activation_modules": [],
+  "conv1_shape": [
+    64,
+    1,
+    7,
+    7
+  ],
+  "bn_momenta": [
+    0.1
+  ]
+}

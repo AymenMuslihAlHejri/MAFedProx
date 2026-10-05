@@ -1,0 +1,67 @@
+{
+  "aggregation": {
+    "rule": "update_aware_n_weighted"
+  },
+  "architecture": "resnet34-encoder_2x-unet-decoder(256,128,64,32,16)_mlp-cls-head_raw-logits",
+  "batch_size": 16,
+  "bn_momentum": 0.1,
+  "bootstrap_seed": 20260930,
+  "drop_last_train": true,
+  "early_stopping": null,
+  "encoder_init": "imagenet_resnet34_rgb_conv1_summed",
+  "grad_clip": null,
+  "image_size": 256,
+  "local_epochs": 2,
+  "loss": {
+    "cls": "BCEWithLogits_unweighted",
+    "dice_eps": 1.0,
+    "lambda_cls": 1.0,
+    "lambda_seg": 1.0,
+    "seg": "0.5*(1-soft_dice_per_image)+0.5*mean_pixel_BCEWithLogits"
+  },
+  "method": "fedprox",
+  "mixed_precision": "bf16_autocast",
+  "mu": 0.1,
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "lr0": 0.0001,
+    "name": "AdamW",
+    "weight_decay": 0.0001
+  },
+  "optimizer_reset_each_round": true,
+  "purpose": "mu_selection_validation_only",
+  "r3": {
+    "aspect_rule": "direct_resize",
+    "clahe_role": "augmentation",
+    "intensity_rule": "declared_range",
+    "vflip_scope": "ultrasound_only"
+  },
+  "regime": "federated",
+  "rounds": 50,
+  "sampler": "class_balanced_WeightedRandomSampler_replacement_train_only",
+  "schedule": {
+    "T_epoch_eq": 100,
+    "block": 2,
+    "lr0": 0.0001,
+    "lr_min": 1e-06,
+    "name": "exposure_indexed_cosine"
+  },
+  "seeds": [
+    101
+  ],
+  "selection": {
+    "criterion": "joint_val_loss_client_macro",
+    "split": "validation",
+    "tie": "earliest"
+  },
+  "split_seed": 20260929,
+  "training_seeds": [
+    101,
+    202,
+    303
+  ]
+}

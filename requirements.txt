@@ -1,0 +1,5 @@
+# Environment used for the reported results (manuscript Section 3.11)
+# Python 3.10.19, CUDA 12.8, NVIDIA RTX 5080 Laptop GPU (16 GB)
+# PyTorch nightly build used: 2.11.0.dev20260122+cu128 (install from the PyTorch nightly index)
+numpy==1.26.4
+segmentation-models-pytorch==0.3.3

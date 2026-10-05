@@ -1,0 +1,18 @@
+==========================================================================================
+ANALYSIS REPRODUCTION CHECK
+==========================================================================================
+Generated               : 2026-10-06T01:52:12
+Frozen analysis folder  : D:\PhD\002 FL Mul BC\01 ready\Springer\BMC Med Imaging\Revision 1\dataset preparing\R6_EXPERIMENTS\_evaluation\analysis\20261004T184158374207Z
+New analysis folder     : D:\PhD\002 FL Mul BC\01 ready\Springer\BMC Med Imaging\Revision 1\dataset preparing\R6_EXPERIMENTS\_evaluation\analysis\20261005T201927083918Z
+bmc_analyze.py (current): 0f70fda15038ee8622a193d617b63e782747b62075e53c41e5c27a33998c621e
+bmc_analyze.py (frozen) : 0adf2c0d5a956e59348823edd74338cd0cc4f2bb7070c132788bc384671a4dd4
+
+[IDENTICAL] confirmatory_tests.csv  sha256=4a73e105635635f6…  (matches frozen manifest)
+[IDENTICAL] main_descriptive.csv  sha256=1d333bf989231ccc…  (matches frozen manifest)
+[IDENTICAL] ablations_descriptive.csv  sha256=51ef6a41cbb1615d…  (matches frozen manifest)
+[IDENTICAL] external_descriptive.csv  sha256=9f13469e816b6670…  (matches frozen manifest)
+[IDENTICAL] per_client_supplementary.csv  sha256=df2a45c07c8d810a…  (matches frozen manifest)
+[IDENTICAL] tau_val_secondary.csv  sha256=f229bfeeaa428789…  (matches frozen manifest)
+
+RESULT: PASS — the current bmc_analyze.py reproduces all six frozen output files byte-identically.
+==========================================================================================

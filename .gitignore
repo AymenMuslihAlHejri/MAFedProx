@@ -1,0 +1,20 @@
+# never commit data, model weights or run outputs
+__pycache__/
+*.pyc
+*.pt
+*.pth
+*.ckpt
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.dcm
+*.npy
+*.npz
+*.zip
+data/
+datasets/
+checkpoints/
+runs/
+outputs/
